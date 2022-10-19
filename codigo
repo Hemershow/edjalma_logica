@@ -1,0 +1,420 @@
+# Lucas Freire, Hemerson
+
+# # =============================================================================
+
+# # Exercício 1
+
+# b = 0
+# cont = 0
+# while cont < 5:
+#     a = int(input("Digite um valor para 'a': "))
+#     print(a)
+#     if a <= 0:
+#         b += 1
+#     cont += 1
+# if b == 1:
+#     print("Dos 5 valores atribuidos para 'a', 1, é negativo")
+# else:
+#     print(f"Dos 5 valores atribuidos para 'a',{b}, são negativos")
+
+# # =============================================================================
+
+
+# # Exercício 2
+
+# nt = 0
+# n = 0
+# fat = 0
+# x = 0
+# aux = 0
+
+# nt = int(input("Digite o valor de n(quantos número deverão ser lidos): "))
+
+
+# for x in range(x,nt):
+#     n = int(input("Digite o valor: "))
+    
+#     if n == 0:
+#         print("Valor = 0 Fatorial = 1")
+#     else:
+#         aux = n
+#         fat = n
+#         while aux > 1:
+#             fat = fat*(aux-1)
+#             aux -= 1
+#         print(f"Valor = {n}, Fatorial = {fat}" )
+
+# # =============================================================================
+
+
+# # Exercício 3
+
+# import math
+
+# n = 1
+# c = 0
+# rn = 0.0
+
+# while n != 0:
+#     n = int(input("Digite um valor (0 p/ encerrar a entrada de dados): "))
+#     if n == 0:
+#         break
+#     else:
+#         if ((c == 0) or (c == 20)):
+#             print("Valor Valor^2 Valor^3 RaizQuadrada")
+#             c = 1
+            
+#         raizn = math.sqrt(n)
+#         print(f"{n}, {n**2}, {n**3} , {raizn}")        
+#         c += 1
+
+# # =============================================================================
+
+
+# # Exercício 4
+
+# aux = 0
+
+# print("Dada a equação E=1+1/1!+1/2!+1/3!+1/N!")
+
+# n = int(input("Digite um valor inteiro e positivo para N: "))
+
+# while n < 0:
+#     n = int(input("Erro! Digite um valor positivo para 'n'"))
+
+# if n < 0:
+#     aux -= 1
+# else:
+#     aux -= n
+    
+#     while n != 1:
+#         aux = aux*(n-1)
+#         n -= 1
+
+# print("E=",1+1/(1*1)+1/(2*1)+1/(3*2*1)+1/aux)
+
+# # =============================================================================
+
+# # Exercício 5
+
+# di = 0
+# fi = 0
+# print("Digite 10 valores")
+# for x in range(10):
+#     v = float(input(f"{x}, Valor: "))
+#     if (v >= 10) and (v <= 20):
+#         di = di + 1
+#     else:
+#         fi = fi + 1
+# print("Dos 10 valores digitados")
+# print(f"{di} estão dentro do intervalo de 10 e 20")
+# print(f"E {fi} não estão nesse intervalor")
+
+# # =============================================================================
+
+
+# # Exercício 6
+
+# a = []
+# b = []
+
+# aux_a = 0
+# aux_b = 0
+
+# print("Digite 5 pares (a,b) de números inteiros e positivos")
+
+# for i in range(5):
+            
+#     aux_a = int(input(f"{i + 1}.º  par a: "))
+#     aux_b = int(input("b: "))
+    
+#     while((aux_a <= 0) and (aux_b <= 0)):
+#         aux_a = int(input(f"{i + 1}.º  par a: "))
+#         aux_b = int(input("b: "))
+        
+#     a.append(aux_a)
+#     b.append(aux_b)
+    
+#     x = []
+#     for j in range(aux_a,aux_b):
+#         if j%2 == 0:
+#             x.append(j)
+#     print(f"Os números pares dentro do intervalo ('{aux_a}', '{aux_b}') são: " + str(x))
+        
+
+# # =============================================================================
+
+# # Exercício 7
+
+# medsal = 0
+# tpessoa = 0
+# percpessoa = 0
+# sal = 1
+# msal = 9999
+# medf = 0
+# while sal > 0:
+#     sal = float(input("Digite o salário: "))
+#     medsal = medsal + sal
+#     if sal > msal:
+#         msal = sal
+#     if sal <= 100:
+#         percpessoa = percpessoa + 1 
+#     f = int(input("Digite o número de filhos: "))
+#     medf = medf + f
+#     tpessoa = tpessoa + 1
+#     break
+# print(f"A média do salário da população é: {medsal/tpessoa}")
+# print(f"A média do número de filhos é: {medf/tpessoa}")
+# print(f"O maior salário é: {msal}")
+# print(f"O percentual de pessoas com salário até R$100,00 é: {percpessoa*100/tpessoa}%")
+
+# # =============================================================================
+
+# # Exercício 8
+
+# x = []
+
+# print("Digite 20 vezes o valor de N")
+
+# for j in range(20):
+#     x.append(int(input(f"{j + 1}º valor: ")))
+    
+    
+#     if x[j] == 0:
+#         print("0 x 0 = 0")
+        
+#     for i in range(1, x[j]+1):
+#         print(f"{i} x {x[j]} = {i*x[j]}")
+
+# # =============================================================================
+
+# # Exercício 9
+
+# valores = []
+
+# ma = 99999
+# me = -99999
+
+# print("Digite 50 valores: ")
+
+# while len(valores) < 50:
+#     v = int(input())
+#     valores.append(v)
+
+# print(f"O maior valor é: {max(valores)}")
+# print(f"O maior valor é: {min(valores)}")
+
+
+# =============================================================================
+
+# # Exercício 10
+
+# func = ["" for i in range(50)]
+# vHor = ["" for i in range(50)]
+# hNor = ["" for i in range(50)]
+# hExt = ["" for i in range(50)]
+# qtdF = 0
+# refF = 0
+# oper = 0
+# while oper != 3:
+#     if oper == 0:
+#         print("SENAI Funcontrol 1.0")
+#         print("-----")
+#         print("Escolha uma opção: ")
+#         print(" [1] Cadastrar horas de funcionário")
+#         print(" [2] Consultar holerite")
+#         print(" [3] Encerrar sistema")
+#         oper = int(input())
+#     elif oper == 1:
+#         qtdF = qtdF + 1
+#         refF = qtdF
+#         func[refF] = input("Nome do funcionário: ")
+#         vHor[refF] = int(input("Valor da hora normal: "))
+#         hNor[refF] =  int(input("Quantidade de horas normais: "))
+#         alt = input("Realizou horas extras? (S ou N): ")
+#         if alt == "S":
+#             hExt[refF] = int(input("Quantidade de horas extras: "))
+#             if hExt[refF] > 20:
+#                 hExt[refF] = 20
+#                 print("")
+#                 print("Horas excedidas! Apenas 20h serão contabilizadas.")
+#             else:
+#                 hExt[refF] = 0
+#             print("")
+#             print("Informações registradas com sucesso! ")
+#             print("")
+#             print("Escolha uma opção: ")
+#             print(" [1] Cadastrar horas de funcionário")
+#             print(" [2] Consultar holerite")
+#             print(" [3] Encerrar sistema")
+#             oper = int(input())
+#     elif oper == 2:
+#         print("SENAI Funcontrol 1.0")
+#         print("-----")
+#         print("Existem", qtdF, " funcionários registrados:")
+#         for count in range(1, qtdF + 1):
+#             print(count, " - ", func[count])
+#         print("")
+#         refF = int(input("Insira o código do funcionário para exibir seu holerite: "))
+#         tNor = hNor[refF] * vHor[refF]
+#         tExt = hExt[refF] * vHor[refF] * 1.5
+#         tVen = tNor + tExt
+        
+#         if tVen > 7087.22:
+#             tInss = 992.21
+#             inss = 0.14
+#         else:
+#             if tVen > 3641.04:
+#                 inss = 0.14
+#             else:
+#                 if tVen > 2427.36:
+#                     inss = 0.12
+#                 else:
+#                     if tVen > 1212.01:
+#                         inss = 0.09
+#                     else:
+#                         inss = 0.075
+#         tInss = inss * tVen
+        
+#         if tVen > 4664.68:
+#             irpf = 0.275
+#         else:
+#             if tVen > 3751.06:
+#                 irpf = 0.225
+#             else:
+#                 if tVen > 2826.66:
+#                     irpf = 0.15
+#                 else:
+#                     if tVen > 1903.99:
+#                         irpf = 0.075
+#                     else:
+#                         irpf <- 0
+#         tIrpf = irpf * tVen
+#         print("/------------------------------------------------\\")
+#         print("| HOLERITE MENSAL SENAI Funcontrol 1.0 |")
+#         print("|------------------------------------------------|")
+#         print("| Funcionário: ", func[refF], "(R$", vHor[refF], "/h) |")
+#         print("|------------------------------------------------|")
+#         print("| Descrição Ref Vencimentos Descontos |")
+#         print("| Salário base ", hNor[refF], "h ", tNor, " 0.00 |")
+#         print("| Horas extras ", hExt[refF], "h ", tExt, " 0.00 |")
+#         print("| INSS ", (inss*100), "% 0.00 ", tInss, " |")
+#         print("| IRPF ", (irpf*100), "% 0.00 ", tIrpf, " |")
+#         print("|------------------------------------------------|")
+#         print("| Totais: ", (tNor+tExt), " ", (tInss+tIrpf), " |")
+#         print("|------------------------------------------------|")
+#         print("| Salário líquido: R$", (tNor+tExt-tInss+tIrpf), " |")
+#         print("\------------------------------------------------/")
+#         print("Escolha uma opção: ")
+#         print(" [2] Consultar outro holerite")
+#         print(" [0] Menu principal")
+#         oper = int(input())
+# print("FIM")  
+
+# =============================================================================
+
+# # Exercício 11
+
+# Qtd=int(input("Quantos Nomes: "))
+# lista_nomes=[]
+# lista_horas=[]
+# lista_salario=[]
+# hora=8.80
+# inss=0
+# for i in range(1,Qtd+1):
+#     nome=input("Digite seu nome: ")
+#     lista_nomes.append(nome)
+#
+# for k,j in enumerate (lista_nomes):
+#     horas=int(input(f"Digite as Horas Trabalhadas pelo {j}"))
+#     esc=input("Fez horas extras?[s/n] ").lower()
+#     if esc[0] =="s":
+#         horas_extras=float(input("Número de horas extras: "))
+#         horas+=horas_extras*hora
+#         salario=horas*hora
+#     lista_horas.append(horas)
+#     salario.append(lista_salario)
+#     print(f"Horas Trabalhadas pelo {j}: {lista_horas[k]}")
+#
+# for a,l in lista_nomes:        
+#     if lista_salario[a] <= 2400:
+#         inss = 10
+#     elif lista_salario[a]>2400:
+#         inss = 14
+#     print(f"Nome: {l}\nTrabalhou: {lista_horas[a]} HRS\nDesconto INSS:{inss}%\nSalário Bruto: {inss/100*lista_salario[a]}")
+
+# =============================================================================
+
+# # Extra 1
+
+# compras = int(input("Número de Compras: "))
+# Valores=[]
+# for i in range(1,compras+1):
+#     print(f"{i} Produto")
+#     valor1=float(input("Valor 1: R$ "))
+#     valor2=float(input("Valor 2: R$ "))
+#     Valores.append(valor1)
+#     Valores.append(valor2)
+# Media = sum(Valores)/len(Valores)
+# if Media>70:
+#     print(f"Média: {Media}\nCaro!")
+# else:    
+#     print(f"Média: {Media}\nBarato!")
+
+# =============================================================================
+
+# # Extra 2
+
+# Menor=0
+# valor=0
+# pesos=[]
+# altura=0
+# peso=0
+# for i in range(1,6):
+#     print(f"{i}° Time")
+#    
+#     for j in range(1,12):
+#         num=int(input(f"Digite a idade do {j}° Jogador: "))
+#         valor+=num
+#        
+#         if num<=18:
+#             Menor+=1
+#        
+#         altura+=float(input(f"Digite a Altura do {j}° Jogador: "))
+#        
+#         peso=float(input(f"Digite o Peso do {j}° Jogador:"))
+#        
+#         if peso>=80:
+#             pesos.append(peso)
+#    
+# print(f"A quantidade de jogadores com idade inferior a 18 anos: {Menor}")
+# print(f"A média das idades dos jogadores de cada time: {valor/55}")
+# print(f"A média das alturas de todos os jogadores do campeonato: {altura/55}")
+# print(f"A percentagem de jogadores com mais de 80 quilos entre todos os jogadores do campeonato: {(len(pesos)*100)/100}%")
+
+# =============================================================================
+
+# Extra 3
+
+# Esse loop vai do número 0 até o 11, mostrando apenas os números pares
+# for i in range(0,11):
+#     if i%2==0:    
+#         print(i)
+# Mesmo código com while
+# num=0
+# while(num<11):
+#     if num%2==0:
+#         print(num)
+#     num+=1
+
+# =============================================================================
+
+# Extra 4
+
+# numeros = ["primeiro","segundo","terceiro","quarto","quinto","sexto","sétimo","oitavo","nono","décimo"]
+# soma=0
+# for i in numeros:
+#     soma+=int(input(f"Digite o {i} número: "))
+# print(f"A soma total é: {soma} ")
+
+# =============================================================================
